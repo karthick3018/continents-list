@@ -44,6 +44,7 @@ const ContinentDetails = ({
           </figure>
           <div>
             <h3>About {details?.name}</h3>
+            <hr/>
             <p className="details">
               <span className="bold">{details?.name}</span> is one of the
               beautiful continent. It is probably know using it's code{" "}

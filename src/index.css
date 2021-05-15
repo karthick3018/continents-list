@@ -3,6 +3,7 @@ body {
   text-rendering: optimizeLegibility;
   font-family: "Inter", sans-serif !important;
   background: #e9eef9;;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -16,7 +17,7 @@ html {
   box-sizing: border-box;
 }
 
-p {
+p,h3 {
   margin: 0;
   font-family: "Inter", sans-serif;
 }

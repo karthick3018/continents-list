@@ -26,7 +26,6 @@ const Components:React.FC = () => {
  
   return (
     <div className="container">
-      api values
       <ContinentList
         continentList={data?.continents}
         handleContinentClick={handleContinentClick}
