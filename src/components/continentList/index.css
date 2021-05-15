@@ -43,13 +43,6 @@ background-color: #1EBCBF;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.list-figure{
-  width: 50px;
-  height: auto;
-  object-fit: cover;
-  object-position: center;
-}
-
 .name{
   font-size: 20px;
   font-weight: 700;

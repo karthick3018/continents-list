@@ -1,5 +1,6 @@
 .modal-content {
   width: 280px;
+  min-height: 300px;
 }
 
 .modal-figure {

@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import Loader from '../loader';
 import ContinentImage from './continents.jpeg'
 import './index.css';
 
@@ -19,9 +20,10 @@ type TContinentDetailsProps = {
   details: {
     name: string;
     code: string;
-    countries : []
+    countries: [];
   };
   isModalOpen: boolean;
+  isLoading: boolean;
   onModalClose: () => void;
 };
 
@@ -29,6 +31,7 @@ const ContinentDetails = ({
   isModalOpen,
   onModalClose,
   details,
+  isLoading
 }: TContinentDetailsProps) => {
   return (
     <>
@@ -42,7 +45,8 @@ const ContinentDetails = ({
           <figure className="modal-figure">
             <img src={ContinentImage} alt="continents" />
           </figure>
-          <div>
+          {!isLoading ?
+            <>
             <h3>About {details?.name}</h3>
             <hr/>
             <p className="details">
@@ -52,7 +56,7 @@ const ContinentDetails = ({
               <span className="bold">{details?.countries?.length}</span>{" "}
               countries, each country has it's own capital and currency.
             </p>
-          </div>
+          </>:<Loader/>}
         </div>
       </Modal>
     </>

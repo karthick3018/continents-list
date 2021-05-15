@@ -29,12 +29,15 @@ const Components:React.FC = () => {
       <ContinentList
         continentList={data?.continents}
         handleContinentClick={handleContinentClick}
+        isLoading={loading}
       />
       <ContinentDetails
         details={detailsData?.continent}
         isModalOpen={isModalOpen}
         onModalClose={handleModalClose}
+        isLoading={detailsLoading}
       />
+      {error && <p>something seems wrong ! more info: {error}</p>}
     </div>
   );
 }
