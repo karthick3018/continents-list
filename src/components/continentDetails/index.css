@@ -1,0 +1,18 @@
+.modal-content {
+  width: 280px;
+}
+
+.modal-figure {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.bold{
+  font-weight: 700;
+}
+
+.details{
+  line-height: 1.7;
+}

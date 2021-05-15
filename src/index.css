@@ -2,6 +2,7 @@ body {
   -webkit-font-smoothing: antialiased !important;
   text-rendering: optimizeLegibility;
   font-family: "Inter", sans-serif !important;
+  background: #e9eef9;;
 }
 
 html {
