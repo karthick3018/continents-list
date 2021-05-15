@@ -3,6 +3,7 @@ import { useQuery, useLazyQuery } from "@apollo/client";
 import * as graphql  from '../graphql/query/continents';
 import ContinentList from './continentList';
 import ContinentDetails from './continentDetails';
+import './index.css';
 
 
 const Components:React.FC = () => {
@@ -24,7 +25,7 @@ const Components:React.FC = () => {
 
  
   return (
-    <div>
+    <div className="container">
       api values
       <ContinentList
         continentList={data?.continents}

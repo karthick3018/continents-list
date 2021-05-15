@@ -1,4 +1,6 @@
 import React from 'react';
+import ContinentIcon from './maps-and-flags.svg';
+import './index.css'
 
 type TContinentListItems = {
   code: string;
@@ -19,10 +21,19 @@ const ContinentList= ({
     <>
       {continentList?.map((eachContinent: TContinentListItems) => {
         return (
-          <li key={eachContinent?.code}>
-            <p onClick={() => handleContinentClick(eachContinent?.code)}>
-              {eachContinent?.name} <span>{eachContinent?.code}</span>
-            </p>
+          <li
+            className="list-wrapper"
+            key={eachContinent?.code}
+            onClick={() => handleContinentClick(eachContinent?.code)}
+          >
+            <figure className="list-figure">
+              <img
+                src={ContinentIcon}
+                alt="continents"
+              />
+            </figure>
+            <p>{eachContinent?.name}</p>
+            <p>{eachContinent?.code}</p>
           </li>
         );
       })}
