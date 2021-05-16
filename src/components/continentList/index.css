@@ -2,7 +2,6 @@
   padding: 15px 25px;
   border-radius: 8px;
   display: flex;
-  justify-content: flex-start;
   flex-direction: column;
   gap: 8px;
   margin-bottom: 10px;
@@ -19,20 +18,20 @@
   height: 60px;
   left: 3%;
   top: 15%;
-  background: #1EBCBF;
+  background:transparent;
 }
 
-/* .blue{
- background-color: #2F67DD;
+.list-wrapper.blue::before{
+ background: #2F67DD;
 } 
 
-.orange{
-background-color: #E65C31;
+.list-wrapper.orange::before{
+ background: #E65C31;
 }
 
-.ocean{
-background-color: #1EBCBF;
-} */
+.list-wrapper.ocean::before{
+ background: #1EBCBF;
+}
 
 .list-wrapper:last-child{
   margin-bottom: 0px;

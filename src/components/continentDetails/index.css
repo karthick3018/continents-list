@@ -4,10 +4,8 @@
 }
 
 .modal-figure {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  object-position: center;
+  width: 280px;
+  height: 190px;
 }
 
 .bold{
@@ -15,6 +13,6 @@
 }
 
 .details{
-  margin-top: 15px;
+  padding-top: 15px;
   line-height: 1.7;
 }

@@ -21,23 +21,27 @@ const ContinentList= ({
   isLoading
 }: TContinentListProps) => {
   return (
-    <>
-      {!isLoading ? continentList?.map((eachContinent: TContinentListItems) => {
-        return (
-          <li
-            className={`list-wrapper ${
-              COLORS[Math.floor(Math.random() * COLORS?.length)]
-            }
+    <ul>
+      {!isLoading ? (
+        continentList?.map((eachContinent: TContinentListItems) => {
+          return (
+            <li
+              className={`list-wrapper ${
+                COLORS[Math.floor(Math.random() * COLORS?.length)]
+              }
             `}
-            key={eachContinent?.code}
-            onClick={() => handleContinentClick(eachContinent?.code)}
-          >
-            <p className="name">{eachContinent?.name}</p>
-            <p className="code">{eachContinent?.code}</p>
-          </li>
-        );
-      }):<Loader/>}
-    </>
+              key={eachContinent?.code}
+              onClick={() => handleContinentClick(eachContinent?.code)}
+            >
+              <p className="name">{eachContinent?.name}</p>
+              <p className="code">{eachContinent?.code}</p>
+            </li>
+          );
+        })
+      ) : (
+        <Loader />
+      )}
+    </ul>
   );
 };
 
