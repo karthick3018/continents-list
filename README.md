@@ -1,46 +1,122 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Continents List
 
-## Available Scripts
+This Project is displays the list of continents present and it shows details like list of countries present in it. 
 
-In the project directory, you can run:
+Code is done using *typescript* which handles all those type related issues . Fetching the data from the server is done using *graphql*. Test cases are written for the two components using *react-testing-library.*
 
-### `yarn start`
+ **Progressive Web Apps** this app also satisfies the conditions of PWA and acts as a PWA.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Client:** React, Typescript , GraphQL , Apollo-client, React-testing-library
 
-### `yarn build`
+## Tech description 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* This project is built using **React** CRA. 
+* It uses plain **css** for styling. 
+* All code is done using **Typescript** where's some part of the code line service worker are done using **Javascript** . 
+* It uses **GraphQL** for fetching the data from the server, along with the help of **Apollo-Client.**
+* **React-testing-library** for handling the testing part . Here we use unit testing.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  
+## API Reference
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+GraphQL basically 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Get all Continents
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```https
+   countries.trevorblades.com
+```
 
-## Learn More
+#### Get Continent
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```https
+  query Continent($code: ID!) 
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
+
+ 
+
+  ## Folder Structure
+
+Folders are splitted into 4 major this 
+* Components 
+* Common
+* GraphQL
+* _ tests_
+
+### Components 
+This is the major folder which will have two sub folders for list and details . Each folder will have a index.tsx which is the entry point of the folder and will have it's respective css file as _index.css_ if needed. 
+
+The entry file for the components folder will have all the logic and states and it will send the need states as props to the relevant components like details and list.  
+
+By this way we can make the unit test more easier and _decouple_ the things
+
+### Common
+
+Common folder will have the things that are used widely in more than one component . It will have the helper functions , constants and other things . This way can make things easier where we need to modify things.
+
+### GraphQL 
+
+This folder will have two sub folders as query and mutation , the get queries will be in the query folder and mutation will have the update things like post/put.
+
+### _ tests_
+
+This folder will have the unit test of each component named in their respective components name .
+## Demo
+ https://karthick3018.github.io/continents-list/
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/karthick3018/continents-list
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+  
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm run deploy
+```
+
+  
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  npm run test
+```
+
+  
