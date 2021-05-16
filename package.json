@@ -2,6 +2,7 @@
   "name": "continents-list",
   "version": "0.1.0",
   "private": true,
+  "homepage": " https://karthick3018.github.io/continents-list/",
   "dependencies": {
     "@apollo/client": "^3.3.18",
     "@testing-library/jest-dom": "^5.11.4",
