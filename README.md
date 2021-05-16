@@ -74,7 +74,11 @@ This folder will have two sub folders as query and mutation , the get queries wi
 
 This folder will have the unit test of each component named in their respective components name .
 ## Demo
- https://karthick3018.github.io/continents-list/
+ https://admiring-meitner-f351dc.netlify.app/
+
+## Report 
+![report](https://github.com/karthick3018/continents-list/blob/main/public/report.png)
+
 ## Run Locally
 
 Clone the project
