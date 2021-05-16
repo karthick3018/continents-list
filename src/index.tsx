@@ -5,6 +5,7 @@ import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { END_POINT } from "./common/helper";
 import Components from "./components";
 import reportWebVitals from "./reportWebVitals";
+import * as serviceWorker from "./serviceWorker";
 import "./index.css";
 
 const client = new ApolloClient({
@@ -25,3 +26,5 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+serviceWorker.register();
+
